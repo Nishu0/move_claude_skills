@@ -1,0 +1,17 @@
+[package]
+name = "{{MODULE_NAME}}"
+version = "0.0.1"
+authors = ["{{AUTHOR_NAME}}"]
+
+[dependencies]
+AptosFramework = { git = "https://github.com/aptos-labs/aptos-framework.git", subdir = "aptos-framework", rev = "mainnet" }
+AptosStdlib = { git = "https://github.com/aptos-labs/aptos-framework.git", subdir = "aptos-stdlib", rev = "mainnet" }
+MoveStdlib = { git = "https://github.com/aptos-labs/aptos-framework.git", subdir = "move-stdlib", rev = "mainnet" }
+
+[addresses]
+# Replace with your actual address from `aptos init`
+{{MODULE_NAME}} = "{{YOUR_ADDRESS}}"
+
+# Alternative: Use "_" and pass address at compile time
+# {{MODULE_NAME}} = "_"
+# Then compile with: aptos move compile --named-addresses {{MODULE_NAME}}=default

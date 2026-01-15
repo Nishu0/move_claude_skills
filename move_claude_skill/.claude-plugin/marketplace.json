@@ -1,0 +1,23 @@
+{
+  "name": "move-claude-skills",
+  "owner": {
+    "name": "Nisarg Thakkar",
+    "email": "itsthakkarnisarg@gmail.com"
+  },
+  "metadata": {
+    "version": "1.0.0",
+    "description": "Claude Code plugins for Move smart contract development on Aptos, Movement, and Supra blockchains"
+  },
+  "plugins": [
+    {
+      "name": "aptos-move-contract",
+      "version": "1.0.0",
+      "description": "Comprehensive Aptos Move smart contract development guide. Includes module templates, testing patterns, on-chain randomness, token vesting, ve(3,3) DEX implementation, and third-party dependency integration.",
+      "author": {
+        "name": "Nisarg Thakkar",
+        "email": "itsthakkarnisarg@gmail.com"
+      },
+      "source": "./plugins/aptos-move-contract"
+    }
+  ]
+}

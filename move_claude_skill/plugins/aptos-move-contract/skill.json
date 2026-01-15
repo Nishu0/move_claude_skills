@@ -1,0 +1,32 @@
+{
+  "name": "aptos-move-contract",
+  "version": "1.0.0",
+  "description": "Comprehensive Aptos Move smart contract development guide with templates, patterns, and examples",
+  "author": {
+    "name": "Nisarg Thakkar",
+    "email": "itsthakkarnisarg@gmail.com"
+  },
+  "repository": "https://github.com/nisargthakkar/move-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "move",
+    "aptos",
+    "smart-contracts",
+    "blockchain",
+    "web3",
+    "defi",
+    "nft"
+  ],
+  "skill": {
+    "trigger": "/aptos-move",
+    "prompt_file": "prompt.md",
+    "examples_dir": "examples/aptos"
+  },
+  "features": {
+    "basic_module": "Simple resource storage with CRUD operations",
+    "token_vesting": "Time-locked token distribution system",
+    "random_nft": "On-chain randomness for NFT generation",
+    "ve33_dex": "Complete ve(3,3) DEX with 4 interconnected modules",
+    "third_party": "Multidex router for external contract integration"
+  }
+}
