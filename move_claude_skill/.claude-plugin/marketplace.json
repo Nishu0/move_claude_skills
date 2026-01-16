@@ -6,7 +6,7 @@
   },
   "metadata": {
     "version": "1.0.0",
-    "description": "Claude Code plugins for Move smart contract development on Aptos, Movement, and Supra blockchains"
+    "description": "Claude Code plugins for Move smart contract development and blockchain SDK integration on Aptos, Movement, and Supra ecosystems"
   },
   "plugins": [
     {
@@ -18,6 +18,16 @@
         "email": "itsthakkarnisarg@gmail.com"
       },
       "source": "./plugins/aptos-move-contract"
+    },
+    {
+      "name": "aptos-ts-sdk",
+      "version": "1.0.0",
+      "description": "Aptos TypeScript SDK guide for building dApps. Covers client setup, account management (Ed25519/Secp256k1), transactions, reading blockchain data, NFT operations, multi-agent and sponsored transactions.",
+      "author": {
+        "name": "Nisarg Thakkar",
+        "email": "itsthakkarnisarg@gmail.com"
+      },
+      "source": "./plugins/aptos-ts-sdk"
     }
   ]
 }

@@ -13,7 +13,7 @@ A collection of Claude Code plugins for Move smart contract and blockchain devel
 | Plugin | Status | Description |
 |--------|--------|-------------|
 | [aptos-move-contract](./plugins/aptos-move-contract) | Active | Aptos Move smart contract development |
-| aptos-ts-sdk | Coming Soon | Aptos TypeScript SDK integration |
+| [aptos-ts-sdk](./plugins/aptos-ts-sdk) | Active | Aptos TypeScript SDK for dApps |
 | movement-move-contract | Coming Soon | Movement L2 Move contracts |
 | supra-move-contract | Coming Soon | Supra blockchain Move contracts |
 
@@ -66,19 +66,24 @@ move_claude_skill/
 │   ├── aptos-move-contract/      # Aptos Move smart contracts
 │   │   ├── skill.json
 │   │   ├── prompt.md
-│   │   └── examples/
-│   │       └── aptos/
-│   │           ├── basic_message.move
-│   │           ├── token_vesting.move
-│   │           ├── random_nft.move
-│   │           ├── package_manager.move
-│   │           ├── coin_wrapper.move
-│   │           ├── liquidity_pool.move
-│   │           ├── simple_dex.move
-│   │           ├── Move.toml.template
-│   │           └── THIRD_PARTY_DEPENDENCIES.md
+│   │   └── examples/aptos/
+│   │       ├── basic_message.move
+│   │       ├── token_vesting.move
+│   │       ├── random_nft.move
+│   │       ├── ve(3,3) DEX modules...
+│   │       └── THIRD_PARTY_DEPENDENCIES.md
 │   │
-│   ├── aptos-ts-sdk/             # (Coming Soon)
+│   ├── aptos-ts-sdk/             # Aptos TypeScript SDK
+│   │   ├── skill.json
+│   │   ├── prompt.md
+│   │   └── examples/
+│   │       ├── 01-setup.ts
+│   │       ├── 02-accounts.ts
+│   │       ├── 03-transactions.ts
+│   │       ├── 04-reading-data.ts
+│   │       ├── 05-tokens-nfts.ts
+│   │       └── 06-advanced.ts
+│   │
 │   ├── movement-move-contract/   # (Coming Soon)
 │   └── supra-move-contract/      # (Coming Soon)
 └── README.md                     # This file
@@ -129,16 +134,56 @@ See [plugins/aptos-move-contract/README.md](./plugins/aptos-move-contract/README
 
 ---
 
+## Plugin: aptos-ts-sdk
+
+TypeScript SDK for building Aptos dApps.
+
+### Features
+
+- **Installation**: npm, pnpm, yarn, bun, browser CDN
+- **Client Setup**: Network configuration (testnet, mainnet, devnet)
+- **Account Management**: Ed25519, Secp256k1, HD wallets
+- **Transactions**: Build, simulate, sign, submit, wait
+- **Data Reading**: Accounts, resources, modules, tokens, events
+- **Advanced**: Multi-agent, sponsored transactions, NFT operations
+
+### Quick Start
+
+```typescript
+import { Aptos, AptosConfig, Network, Account } from "@aptos-labs/ts-sdk";
+
+const aptos = new Aptos(new AptosConfig({ network: Network.TESTNET }));
+const account = Account.generate();
+
+// Fund account (testnet)
+await aptos.fundAccount({ accountAddress: account.accountAddress, amount: 100_000_000 });
+
+// Send transaction
+const tx = await aptos.transaction.build.simple({
+  sender: account.accountAddress,
+  data: {
+    function: "0x1::aptos_account::transfer",
+    functionArguments: [recipientAddress, 100],
+  },
+});
+const auth = aptos.transaction.sign({ signer: account, transaction: tx });
+const result = await aptos.transaction.submit.simple({ transaction: tx, senderAuthenticator: auth });
+```
+
+See [plugins/aptos-ts-sdk/README.md](./plugins/aptos-ts-sdk/README.md) for full documentation.
+
+---
+
 ## Roadmap
 
-### Phase 1: Move Smart Contracts (Current)
+### Phase 1: Aptos Ecosystem (Complete)
 - [x] Aptos Move contracts
-- [ ] Movement Move contracts
-- [ ] Supra Move contracts
+- [x] Aptos TypeScript SDK
 
-### Phase 2: SDK Integration
-- [ ] Aptos TypeScript SDK
+### Phase 2: Movement & Supra
+- [ ] Movement Move contracts
 - [ ] Movement SDK
+- [ ] Supra Move contracts
 - [ ] Supra SDK
 
 ### Phase 3: Full-Stack Templates
