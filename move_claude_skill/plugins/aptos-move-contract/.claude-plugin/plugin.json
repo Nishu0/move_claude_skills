@@ -1,0 +1,10 @@
+{
+    "name": "aptos-move-contract",
+    "version": "1.0.0",
+    "description": "Aptos Move smart contract development guide with templates, patterns, and examples",
+    "author": {
+      "name": "Nisarg Thakkar",
+      "email": "itsthakkarnisarg@gmail.com",
+      "url": "https://github.com/Nishu0/move_claude_skills"
+    }
+  }

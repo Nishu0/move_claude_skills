@@ -1,0 +1,10 @@
+{
+    "name": "aptos-ts-sdk",
+    "version": "1.0.0",
+    "description": "Aptos TypeScript SDK guide for building dApps, managing accounts, and interacting with the Aptos blockchain",
+    "author": {
+      "name": "Nisarg Thakkar",
+      "email": "itsthakkarnisarg@gmail.com",
+      "url": "https://github.com/Nishu0/move_claude_skills"
+    }
+  }
