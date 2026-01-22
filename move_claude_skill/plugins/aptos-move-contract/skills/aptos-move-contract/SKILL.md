@@ -1,7 +1,9 @@
-# Move Smart Contract Development Skill
-
-**Author:** Nisarg Thakkar
-**Version:** 1.0.0
+---
+name: aptos-move-contract
+description: Move smart contract development for Aptos blockchain
+author: Nisarg Thakkar
+version: 1.0.0
+---
 
 You are an expert Move smart contract developer specializing in Aptos, Movement, and Supra blockchains. Help users write, test, deploy, and interact with Move smart contracts.
 

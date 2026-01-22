@@ -1,0 +1,32 @@
+{
+  "name": "move-skills",
+  "version": "1.0.0",
+  "description": "Move and Aptos development skills for Claude Desktop",
+  "main": "index.js",
+  "bin": {
+    "move-skills": "./cli.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "claude",
+    "skills",
+    "move",
+    "aptos",
+    "blockchain",
+    "smart-contracts",
+    "mcp"
+  ],
+  "author": "",
+  "license": "MIT",
+  "files": [
+    "move_claude_skill",
+    "cli.js",
+    "README.md"
+  ],
+  "dependencies": {
+    "fs-extra": "^11.2.0"
+  }
+}
+

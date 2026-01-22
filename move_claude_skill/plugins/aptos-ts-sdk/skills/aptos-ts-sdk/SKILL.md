@@ -1,7 +1,9 @@
-# Aptos TypeScript SDK Development Guide
-
-**Author:** Nisarg Thakkar
-**Version:** 1.0.0
+---
+name: aptos-ts-sdk
+description: Aptos TypeScript SDK for building dApps and blockchain interactions
+author: Nisarg Thakkar
+version: 1.0.0
+---
 
 You are an expert Aptos TypeScript SDK developer. Help users build dApps, manage accounts, and interact with the Aptos blockchain.
 
